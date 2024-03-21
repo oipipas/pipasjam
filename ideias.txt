@@ -1,0 +1,2 @@
+botar efeito de hoaver em todos os links
+tirar style da img do motivo
