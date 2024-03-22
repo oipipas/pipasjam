@@ -35,14 +35,20 @@ main {
     width: 1200px;
     margin: auto;
     padding: 0px;
-    box-shadow:0px 0px 15px #00000075;
+    box-shadow: 0px 100%px 15px #00000075;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-color: var(--cor5);
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     border-style: solid;
 }
 header {
-    padding: 0px;
+    background-color: var(--cor5);
+    width: 1200px;
+    margin: auto;
+    border-color: var(--cor5);
+    border-radius: 15px 15px 0 0;
+    border-style: solid;
+    box-shadow: 0px 0px 15px #00000075;
 }
 nav {
     border: var(--cor5);
@@ -67,12 +73,14 @@ img {
     border-style: solid;
 }
 p#frasehead {
-    color: var(--cor5);
-
-    text-align: center;
+    text-align: left;
     font-family: 'Dudu Calligraphy';
     font-weight: bolder;
     font-size: 20px;
+}
+.coluna-direita #bemvindo {
+    font-size: 30px;
+    color: var(--cor5);
 }
 a {
     color: var(--cor5);
@@ -104,10 +112,13 @@ h1 {
 }
 h2 {
     font-family: 'Dudu Calligraphy';
+    margin-top: 0;
 }
 h3 {
     font-family: 'Dudu Calligraphy';
+    font-size: 20px;
     text-align: center;
+    margin: 0;
 }
 .content {
     display: flex;
@@ -117,38 +128,33 @@ h3 {
 .coluna-esquerda {
     width: 170px;
     padding: 10px;
+    padding-top: 35px;
     outline-style: solid;
     outline-color: var(--cor5);
     text-align: center;
-
 }
 .coluna-esquerda ul {
     padding: 5px;
     list-style-type: none;
     margin: auto;
     width: 120px;
-    text-align: left;
 }
 .coluna-direita {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     outline-style: solid;
     outline-color: var(--cor5);
 }
 
 footer {
-    background-color: var(--cor5);
     text-align: center;
     padding: 20px;
     margin-top: auto; /* Footer abaixo de tudo */
+    border-radius: 0 0 5px 5px;
 }
 footer p {
-    color: var(--cor3);
     font-family: 'Dudu Calligraphy';
     margin: 10px;
 }
-ul {
-}
 li {
-
 }
