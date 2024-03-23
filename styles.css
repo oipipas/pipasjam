@@ -44,6 +44,7 @@ main {
 header {
     background-color: var(--cor5);
     width: 1200px;
+    height: 150px;
     margin: auto;
     border-color: var(--cor5);
     border-radius: 15px 15px 0 0;
@@ -125,10 +126,13 @@ h3 {
     flex: 1;
     
 }
+iframe {
+    width: 950px;
+}
 .coluna-esquerda {
     width: 170px;
     padding: 10px;
-    padding-top: 35px;
+    padding-top: 20px;
     outline-style: solid;
     outline-color: var(--cor5);
     text-align: center;
@@ -138,6 +142,9 @@ h3 {
     list-style-type: none;
     margin: auto;
     width: 120px;
+}
+.coluna-esquerda li {
+    padding-bottom: 10px;
 }
 .coluna-direita {
     flex: 1;
@@ -155,6 +162,4 @@ footer {
 footer p {
     font-family: 'Dudu Calligraphy';
     margin: 10px;
-}
-li {
 }
