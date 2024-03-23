@@ -56,8 +56,6 @@ nav {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
-
-    padding: 10px;
 }
 img#pipasjam {
     border-style: none;
@@ -133,21 +131,26 @@ hr {
     border-color: var(--cor5);
     border-width: 2px;
 }
+ol {
+    padding: 0;
+}
 .content {
     display: flex;
     flex: 1;
-    
-}
-iframe {
-    width: 950px;
 }
 .coluna-esquerda {
-    width: 170px;
-    padding: 10px;
-    padding-top: 20px;
     outline-style: solid;
     outline-color: var(--cor5);
     text-align: center;
+    padding-top: 10px;
+}
+.coluna-esquerda iframe {
+    width: 190px;
+    height: 500px;
+    scrollbar-width: 0;
+}
+.coluna-direita iframe {
+    width: 950px;
 }
 .coluna-esquerda ul {
     padding: 5px;
@@ -173,7 +176,4 @@ footer {
 footer p {
     font-family: 'Dudu Calligraphy';
     margin: 10px;
-}
-small {
-    color: var(--cor4);
 }
