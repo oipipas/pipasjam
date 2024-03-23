@@ -73,6 +73,13 @@ img {
     border-color: var(--cor5);
     border-style: solid;
 }
+img.semborda {
+    display: block;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+}
 p#frasehead {
     text-align: left;
     font-family: 'Dudu Calligraphy';
@@ -141,7 +148,6 @@ iframe {
     padding: 5px;
     list-style-type: none;
     margin: auto;
-    width: 120px;
 }
 .coluna-esquerda li {
     padding-bottom: 10px;
