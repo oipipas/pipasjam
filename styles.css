@@ -84,10 +84,6 @@ p#frasehead {
     font-weight: bolder;
     font-size: 20px;
 }
-.coluna-direita #bemvindo {
-    font-size: 30px;
-    color: var(--cor5);
-}
 a {
     color: var(--cor5);
     font-family: 'Dudu Calligraphy';
@@ -186,4 +182,7 @@ footer p {
     justify-content: center; /* centraliza horizontalmente */
     align-items: center; /* centraliza verticalmente */
     height: auto; /* ajusta para o tamanho da tela */
+}
+.flex {
+    display:flex;
 }
