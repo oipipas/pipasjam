@@ -28,6 +28,27 @@
     /* Default: Blue */
     --link: #2453d4;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #9a3f3f #fff9f6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fff9f6;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #9a3f3f;
+    border-radius: 10px;
+    border: 3px none #fff9f6;
+}
         body {
             background-color: var(--cor1)
         }

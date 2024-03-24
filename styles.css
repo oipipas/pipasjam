@@ -1,6 +1,6 @@
 :root {
     /* Default: White */
-    --cor1: #fff9f6;
+    --cor1: rgb(255, 249, 246);
 
     /* Default: Light Pink */
     --cor2: #ffedeb;
@@ -16,6 +16,27 @@
 
     /* Default: Yellorange*/
     --cor6: #f8b865;    
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #9a3f3f #fff9f6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fff9f6;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #9a3f3f;
+    border-radius: 10px;
+    border: 3px none #fff9f6;
 }
 body {
     display: flex;
