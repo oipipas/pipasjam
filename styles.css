@@ -181,3 +181,9 @@ footer p {
     font-family: 'Dudu Calligraphy';
     margin: 10px;
 }
+.audio-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    height: auto; /* ajusta para o tamanho da tela */
+}

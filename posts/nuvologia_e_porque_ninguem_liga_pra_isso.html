@@ -4,23 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pipas Jam</title>
-    <link href="../styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
-<body><main>
-    <header>
+<style>
+:root {
+    /* Default: White */
+    --cor1: #fff9f6;
+
+    /* Default: Light Pink */
+    --cor2: #ffedeb;
+
+    /* Default: Pink */
+    --cor3: #ffe3d4;
+
+    /* Default: Dark Pink */
+    --cor4: #e5afaf;
+
+    /* Default: Brown */
+    --cor5: #9A3F3F;
+
+    /* Default: Yellorange*/
+    --cor6: #f8b865;    
+}
+    div.coluna-direita {
+        width: 100px;
+    }
+    .coluna-direita li {
+        background-color: var(--cor3);
+        border-radius: 7px;
+        padding: 5px;
+        font-family: 'Dudu Calligraphy';
+        font-weight: bolder;
+        font-size: 17px;
+        color: var(--cor5);
+        list-style-position: inside;
+    }
+    .coluna-direita p {
+        padding-left: 20px;
+        text-align: justify;
+    }
+    .coluna-direita a {
+        font-weight: bolder;
+        font-size: 17px;
+    }
+</style>
+<body>
+<header>
         <img src="../img/pipasjam.png" id="pipasjam" alt="pipas jam">
-        <p id="frasehead"><small>meu cantinho onde eu divago sobre qualquer tema que eu não tiver com quem comentar</small></p>
-            <nav>  
-                <section class="hoverlink">
-                    <a href="../index.html">Página inicial</a>
-                    <a href="../sobre.html">Sobre mim</a>
-                    <a href="../motivo.html">Motivo</a>
-                </section>
-            </nav>
-    </header>
-        <h1>Nuvologia e por que ninguem liga pra isso? 😭😭</h1>
-        <hr>
+</header>
+<main>
+    <div class="content">
+        <div class="coluna-esquerda"> 
+            <iframe src="../navbar.html" frameborder="0" width="127" height="auto" scrolling="no"></iframe>
+</header>
+        </div>
+    
+        <div class="coluna-direita">
+            <section class="hoverlink">
+                <h1>Nuvologia e por que ninguem liga pra isso? 😭😭</h1>
                 <p>Oi oi amigxs do blog, quero comentar sobre um negócio que me agonia muito. Desde por volta dos meus 13 anos, desenvolvi um fascínio por nuvens e pelo céu em geral. Até agora, <strong>tenho 236 fotos colecionadas</strong>, sem contar as perdidas.
                 Já compartilhei meu hobby de tirar foto do céu com praticamente todos os meus amigos, até incluí na minha bio do Instagram sobre a Nuvologia. Mas só UMA PESSOA demonstrou interesse, e por pouco tempo. Comentei várias vezes com meus amigos mais próximos, e embora tenham achado bonito, não se engajaram no assunto. Claro que não os julgo, mas sinceramente não entendo como alguém pode ver céus tão menteexplodimentais, cheios de cores, formas, texturas e tamanhos, e não ficar maravilhado com isso.</p>
     
@@ -28,14 +70,21 @@
     
                 <p>Uma curiosidade sobre minha jornada como nuvólogo é que eu já tinha teorizado corretamente que existem mais ou menos três camadas de nuvens. Minhas favoritas, é claro, são as mais altas, as gigantes, que são visualmente mais definidas e muitas vezes têm a forma de cogumelos. Meu sonho mesmo é ver ao vivo uma Cumulonimbus e analisar se as núvens do Japão são diferentes da do Brasil, suponho que sim.</p>
 <br>  
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8oLE9elCZGcvREyU-13CJXSPg5aIuK7LllIL9VJ7Gs3QJYdK7O2Ud6Y4FjJhyphenhyphenoKdKNkF5xMBlw6VWUYmzlK3WCq2nGBLlB9xYe3KRneOOYNV1Oc-2g9VZrK2ogAQ2t1BXUlf8PKRcl1VqvbnOpOTHTqPmUqRwXtmVsaLGZl4vn2dCRKZtaoOpYosrer2/w320-h144/20230305_190750.jpg" alt=""><br>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8oLE9elCZGcvREyU-13CJXSPg5aIuK7LllIL9VJ7Gs3QJYdK7O2Ud6Y4FjJhyphenhyphenoKdKNkF5xMBlw6VWUYmzlK3WCq2nGBLlB9xYe3KRneOOYNV1Oc-2g9VZrK2ogAQ2t1BXUlf8PKRcl1VqvbnOpOTHTqPmUqRwXtmVsaLGZl4vn2dCRKZtaoOpYosrer2/w320-h144/20230305_190750.jpg" alt="">
     
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpBd0XHQjlYwD7IiEyKK-IzaUuTGtyXn3ZDIVOIrIOpxRmA5cW9v2YcbliCoHv7IdQ8qn6XOFKDWAyfjZnjuvBLOrLWTPSMBjqk7fdXM6pUs_5TmAcuVot5GhPaAT1QeAHWELrq4_bwqc_nPON90tjKhTk7VdSxX3YO_pZRi-PfU85MBGbtRwF7Xb0n62n/w320-h144/20230102_191819.jpg" alt=""><br>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpBd0XHQjlYwD7IiEyKK-IzaUuTGtyXn3ZDIVOIrIOpxRmA5cW9v2YcbliCoHv7IdQ8qn6XOFKDWAyfjZnjuvBLOrLWTPSMBjqk7fdXM6pUs_5TmAcuVot5GhPaAT1QeAHWELrq4_bwqc_nPON90tjKhTk7VdSxX3YO_pZRi-PfU85MBGbtRwF7Xb0n62n/w320-h144/20230102_191819.jpg" alt="">
     
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPPWGWyEHwo0lSVyb1PkMqjpBIZbNw6fANcFuOWOOe2bKizvC1OlIm2VHgARzKUHFjkQgIMFKEfjWrhspxwFnYaog-V__TuUKHVy11HmGU88YT4C6MfucrLVKeVBkWb7JqvHrbqleci5o6GfLAl3v6NmeYMKrnoa8N2i5-ER41NPE0axHMameMBsvEjFvg/w320-h144/20211231_152508.jpg" alt=""><br>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPPWGWyEHwo0lSVyb1PkMqjpBIZbNw6fANcFuOWOOe2bKizvC1OlIm2VHgARzKUHFjkQgIMFKEfjWrhspxwFnYaog-V__TuUKHVy11HmGU88YT4C6MfucrLVKeVBkWb7JqvHrbqleci5o6GfLAl3v6NmeYMKrnoa8N2i5-ER41NPE0axHMameMBsvEjFvg/w320-h144/20211231_152508.jpg" alt="">
             </p>
     
             <p><small>2/05/2024 06:07:00 AM [blogger]</small></p>
+            </section>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Footer</p>
+    </footer>
 </main>
 
 </body>
