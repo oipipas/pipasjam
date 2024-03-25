@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipas Jam</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+    /* Default: White */
+    --cor1: #fff9f6;
+
+    /* Default: Light Pink */
+    --cor2: #ffedeb;
+
+    /* Default: Pink */
+    --cor3: #ffe3d4;
+
+    /* Default: Dark Pink */
+    --cor4: #e5afaf;
+
+    /* Default: Brown */
+    --cor5: #9a3f3f;
+
+    /* Default: Yellorange*/
+    --cor6: #f8b865;    
+}
+.coluna-direita a {
+        font-weight: bolder;
+        font-size: 17px;
+    }
+h1 {
+-webkit-animation: bounce .5s ease infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    transform:translateY(-5px);
+  }
+}
+    </style>
+</head>
+<script type="text/javascript">
+    // <![CDATA[
+    var bits=100; // how many bits
+    var speed=20; // how fast - smaller is faster
+    var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
+    var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c"); 
+    //                     blue    red     green   purple  cyan    orange  pink
+    
+    /****************************
+    *      Fireworks Effect     *
+    *(c)2004-14 mf2fm web-design*
+    *  http://www.mf2fm.com/rv  *
+    * DON'T EDIT BELOW THIS BOX *
+    ****************************/
+    var bangheight=new Array();
+    var intensity=new Array();
+    var colour=new Array();
+    var Xpos=new Array();
+    var Ypos=new Array();
+    var dX=new Array();
+    var dY=new Array();
+    var stars=new Array();
+    var decay=new Array();
+    var swide=800;
+    var shigh=600;
+    var boddie;
+    
+    if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+      var oldonload=window.onload;
+      if (typeof(oldonload)!='function') window.onload=funky;
+      else window.onload=function() {
+        if (oldonload) oldonload();
+        funky();
+      }
+    }
+    
+    addRVLoadEvent(light_blue_touchpaper);
+    
+    function light_blue_touchpaper() { if (document.getElementById) {
+      var i;
+      boddie=document.createElement("div");
+      boddie.style.position="fixed";
+      boddie.style.top="0px";
+      boddie.style.left="0px";
+      boddie.style.overflow="visible";
+      boddie.style.width="1px";
+      boddie.style.height="1px";
+      boddie.style.backgroundColor="transparent";
+      document.body.appendChild(boddie);
+      set_width();
+      for (i=0; i<bangs; i++) {
+        write_fire(i);
+        launch(i);
+        setInterval('stepthrough('+i+')', speed);
+      }
+    }}
+    
+    function write_fire(N) {
+      var i, rlef, rdow;
+      stars[N+'r']=createDiv('|', 12);
+      boddie.appendChild(stars[N+'r']);
+      for (i=bits*N; i<bits+bits*N; i++) {
+        stars[i]=createDiv('*', 13);
+        boddie.appendChild(stars[i]);
+      }
+    }
+    
+    function createDiv(char, size) {
+      var div=document.createElement("div");
+      div.style.font=size+"px monospace";
+      div.style.position="absolute";
+      div.style.backgroundColor="transparent";
+      div.appendChild(document.createTextNode(char));
+      return (div);
+    }
+    
+    function launch(N) {
+      colour[N]=Math.floor(Math.random()*colours.length);
+      Xpos[N+"r"]=swide*0.5;
+      Ypos[N+"r"]=shigh-5;
+      bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
+      dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
+      if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
+      else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
+      else stars[N+"r"].firstChild.nodeValue="|";
+      stars[N+"r"].style.color=colours[colour[N]];
+    }
+    
+    function bang(N) {
+      var i, Z, A=0;
+      for (i=bits*N; i<bits+bits*N; i++) { 
+        Z=stars[i].style;
+        Z.left=Xpos[i]+"px";
+        Z.top=Ypos[i]+"px";
+        if (decay[i]) decay[i]--;
+        else A++;
+        if (decay[i]==15) Z.fontSize="7px";
+        else if (decay[i]==7) Z.fontSize="2px";
+        else if (decay[i]==1) Z.visibility="hidden";
+        if (decay[i]>1 && Math.random()<.1) {
+           Z.visibility="hidden";
+           setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
+        }
+        Xpos[i]+=dX[i];
+        Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+    
+      }
+      if (A!=bits) setTimeout("bang("+N+")", speed);
+    }
+    
+    function stepthrough(N) { 
+      var i, M, Z;
+      var oldx=Xpos[N+"r"];
+      var oldy=Ypos[N+"r"];
+      Xpos[N+"r"]+=dX[N+"r"];
+      Ypos[N+"r"]-=4;
+      if (Ypos[N+"r"]<bangheight[N]) {
+        M=Math.floor(Math.random()*3*colours.length);
+        intensity[N]=5+Math.random()*4;
+        for (i=N*bits; i<bits+bits*N; i++) {
+          Xpos[i]=Xpos[N+"r"];
+          Ypos[i]=Ypos[N+"r"];
+          dY[i]=(Math.random()-0.5)*intensity[N];
+          dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
+          decay[i]=16+Math.floor(Math.random()*16);
+          Z=stars[i];
+          if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
+          else if (M<2*colours.length) Z.style.color=colours[colour[N]];
+          else Z.style.color=colours[i%colours.length];
+          Z.style.fontSize="13px";
+          Z.style.visibility="visible";
+        }
+        bang(N);
+        launch(N);
+      }
+      stars[N+"r"].style.left=oldx+"px";
+      stars[N+"r"].style.top=oldy+"px";
+    } 
+    
+    window.onresize=set_width;
+    function set_width() {
+      var sw_min=999999;
+      var sh_min=999999;
+      if (document.documentElement && document.documentElement.clientWidth) {
+        if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+        if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+      }
+      if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+        if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+        if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+      }
+      if (document.body.clientWidth) {
+        if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+        if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+      }
+      if (sw_min==999999 || sh_min==999999) {
+        sw_min=800;
+        sh_min=600;
+      }
+      swide=sw_min;
+      shigh=sh_min;
+    }
+    // ]]>
+    </script>
+<body>
+    <header>
+            <img src="../img/pipasjam.png" id="pipasjam" alt="pipas jam">
+    </header>
+    <main>
+        <div class="content">
+            <div class="coluna-esquerda"> 
+                <iframe src="../navbar.html" frameborder="0" width="127" height="auto" scrolling="no"></iframe>
+    </header>
+            </div>
+        
+            <div class="coluna-direita">
+                <div class="my_animation">
+                    <h1>NOVO PIPAS JAM OFICIALMENTE LANÇADO!!!!</h1>
+                </div>
+        </a>
+        <section class="hoverlink">
+                        <p>Bom dia todo mundo! Depois de 10 dias estudando HTML, o novo blog do Pipas tá oficialmente no ar através do <em>Neocities</em>!!!! Pra quem não sabe o Neocities é uma plataforma pra hospedar blogs, funciona pra qualquer tipo de site, mas ele tem uma comunidade e uma ideia de resgatar os sites pessoais e ultra personalizados da internet dos anos 2000, e eu amo essa ideia.</p> 
+                            
+                        <p>Pensei que levaria muito mais tempo pra criar o blog do jeito que eu quero. Na real também não posso me impressionar muito porque teve dia que eu passei 6 horas seguidas só estudando, por puro prazer. O blog óbvio que não tá 100% como eu quero, em questão de layout e usabilidade até tá, mas ainda quero melhorar muito a questão estética, to pensando em pagar uma artista pra criar a identidade visual do blog. Enquanto isso eu to feliz do jeito que ele tá agora, já tem um bom tanto da miña personalidade nele. E eu adoro essa sensação de estar isolado das redes sociais das mega corporações, me da um sensação de segurança e pureza.</p>
+                        
+                        <p>Ao longo dessa jornada aprendendo HTML, eu não só aprendi "programar" sites que já é algo muito útil e interessante, como descobri todo um novo mundo artístico e de pessoas, coñeci blogs explodimentais e que me abriram um novo mundo de jeitos que eu posso me expressar. Vou colocar abaixo os buttons 88x31 dos blogs que eu mais gostei pra vocês conhecerem. <strong>Também preciso comentar do blog mais importante dessa jornada</strong>, o <a href="nonkiru.art">Nonkiru.</a>Não só é a miña maior inspiração na criação do meu blog, como eu até tive contato por email com x criadorx, onde elx me ajudou com certas mecanicas do HTML e foi uma experiência muito bacana.</p>
+
+                        <p>Enquanto isso o antigo blog do Pipas Jam vai continuar existindo por aí como uma relíquia do começo da minha jornada até o Google oficialmente fechar o Blogger (não sei como isso ainda não aconteceu). E nesse meu novo blog eu planejo adicionar um monte de bobajada e coisas pra registrar os meus pensamentos e gostos, fazer daqui o meu mundinho, acho que isso vai ser muito foda de rever quando eu tiver mais velho. </p>
+
+
+                        </section>
+            <div class="flex" style="justify-content:center">
+
+                        <a href="https://nonkiru.art/" target="_blank" style="padding: 5px">
+                            <img src="../img/nonkiru_button_light.gif" alt="nonkiru button" class="semborda">
+                        <a href="https://daniele63.neocities.org/" target="_blank" style="padding: 5px;">
+                            <img src="https://daniele63.neocities.org/images/danieles_button.jpg" alt="nonkiru button" class="semborda" >
+                        <a href="https://nyaa.neocities.org/" target="_blank" style="padding: 5px;">
+                            <img src="https://nyaa.neocities.org/nyaabanner.gif" class="semborda">
+                        <a href="https://sugarforbrains.neocities.org/home" target="_blank" style="padding: 5px;">
+                            <img src="https://sugarforbrains.neocities.org/img/88x31/sugarNEW.gif" class="semborda">  
+                        <a href="https://lostlove.neocities.org/" target="_blank" style="padding: 5px;">
+                            <img src="https://lostlove.neocities.org/images/button.gif" class="semborda">      
+                        <a href="https://cloverbell.neocities.org" target="_blank" style="padding: 5px;">
+                            <img src="https://cloverbell.neocities.org/n_n/cloverbell.gif" class="semborda"></a> 
+            </div>
+
+
+                <p><small>2/05/2024 06:07:00 AM [blogger]</small></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>desde 5 de fevereiro de 2024!</strong></p>
+            <p>hosteado no Neocities e programado 100% por mim!</p>
+            <p><small><em>2ª edição do site</em></p>
+    </footer>
+    </main>
+    
+    </body>
+    </html>
+    

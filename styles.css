@@ -90,7 +90,7 @@ img {
 }
 img.semborda {
     display: block;
-    margin: 30px;
+    margin: 0px;
     margin-left: auto;
     margin-right: auto;
     border-style: none;
@@ -186,6 +186,7 @@ ol {
     padding: 30px;
     outline-style: solid;
     outline-color: var(--cor5);
+    text-align: justify;
 }
 
 footer {
