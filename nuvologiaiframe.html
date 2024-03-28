@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipas Jam</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+    /* Default: White */
+    --cor1: #fefbf5;
+
+    /* Default: Light Pink */
+    --cor2: #ffedeb;
+
+    /* Default: Pink */
+    --cor3: #ffc9c6;
+
+    /* Default: Dark Pink */
+    --cor4: #ee918c;
+
+    /* Default: Brown */
+    --cor5: #ad4944;
+
+    /* Default: Yellorange*/
+    --cor6: #f8b865;    
+
+    /* Default: Blue */
+    --link: #2453d4;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #9a3f3f #fff9f6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #fff9f6;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #9a3f3f;
+    border-radius: 10px;
+    border: 3px none #fff9f6;
+}
+body {
+    background-color: var(--cor1)
+}
+
+section.hoverlink a:hover {
+        background-color: var(--cor5);
+        color: var(--cor2);
+        border-radius: 7px;
+        transition-duration: .3s;
+        margin:0px;
+}
+section.hoverlink2 img:hover {
+    background-color: var(--cor5);
+    color: var(--cor2);
+    outline-offset: 5px;
+    transition-duration: .2s;
+    box-shadow: 0px 0px 5px 3px #9a3f3fbb;
+}
+img {
+    display: flex;
+    margin: 10px;
+    margin-bottom: 30px;
+    border-width: 3px;   
+    border-color: var(--cor5);
+    border-style: solid;
+    height: 200px;
+    width: auto;
+}
+.flex {
+    display:flex;
+    justify-content:center;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="hoverlink2">
+        <div class="flex">
+            <div id="coluna1">
+                <a href="img/nuvologia/1.jpg"><img src="img/nuvologia/1.jpg" alt=""></a>
+                <a href="img/nuvologia/4.jpg"><img src="img/nuvologia/4.jpg" alt=""></a>
+            </div>
+            <div id="coluna2">
+                        <a href="img/nuvologia/2.jpg"><img src="img/nuvologia/2.jpg" alt=""></a>
+                        <a href="img/nuvologia/3.jpg"><img src="img/nuvologia/3.jpg" alt=""></a>
+                    </div>
+        </div>
+    </div>
+</div>
+</section>
+    </main>
+</body>
+</html>
