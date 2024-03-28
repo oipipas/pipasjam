@@ -117,6 +117,10 @@ a {
 section.hoverlink a {
     margin: 5px;
 }
+section.hoverlink2 a:hover {
+    size: 120px;
+    transition-duration: .3s;
+}
 section.hoverlink a:hover {
     background-color: var(--cor5);
     color: var(--cor2);
