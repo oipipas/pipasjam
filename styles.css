@@ -162,8 +162,6 @@ ol {
     flex: 1;
 }
 .coluna-esquerda {
-    outline-style: solid;
-    outline-color: var(--cor5);
     text-align: center;
     padding-top: 10px;
 }
@@ -171,9 +169,6 @@ ol {
     width: 190px;
     height: 550px;
     scrollbar-width: 0;
-}
-.coluna-direita iframe {
-    width: 950px;
 }
 .coluna-esquerda ul {
     padding: 5px;
@@ -189,13 +184,19 @@ ol {
     outline-style: solid;
     outline-color: var(--cor5);
     text-align: justify;
+    border-width: 1px 1px 1px 0px;
 }
-
+.coluna-direita iframe {
+    width: 950px;
+}
 footer {
     text-align: center;
     padding: 15px;
     margin-top: auto; /* Footer abaixo de tudo */
     border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 4px 0px 0px 0px;
+    border-color: var(--cor5);
 }
 footer p {
     font-family: 'Dudu Calligraphy';
