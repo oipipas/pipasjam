@@ -103,13 +103,13 @@ p {
 }
 p#frasehead {
     text-align: left;
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     font-weight: bolder;
     font-size: 20px;
 }
 a {
     color: var(--cor5);
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     text-decoration: none;
     font-size: 20px;
     
@@ -135,18 +135,18 @@ h2, h3 {
 }
 h1 {
     text-align: center;
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     color: var(--cor5);
     font-size: 2.5em;
     color: var(--cor5);
 }
 h2 {
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     margin-top: 0;
     color: var(--cor5);
 }
 h3 {
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     font-size: 20px;
     text-align: center;
     margin: 0;
@@ -203,7 +203,7 @@ footer {
     border-color: var(--cor5);
 }
 footer p {
-    font-family: 'Dudu Calligraphy';
+    font-family: "Patrick Hand", cursive;
     margin: 3px;
 }
 .audio-container {
@@ -215,3 +215,9 @@ footer p {
 .flex {
     display:flex;
 }
+.patrick-hand-regular {
+    font-family: "Patrick Hand";
+    font-weight: 400;
+    font-style: normal;
+  }
+  
