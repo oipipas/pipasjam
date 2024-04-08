@@ -1,0 +1,33 @@
+:root {
+    /* Default: Whitest */
+    --cor1: rgb(255, 244, 254);
+
+    /* Default: light */
+    --cor2: #bde0feff;
+
+    /* Default: Medium */
+    --cor3: #ffafccff;
+
+    /* Default: Medium dark */
+    --cor4: #ffc8ddff;
+
+    /* Default: Darkzao */
+    --cor5: #cdb4dbff;
+
+    /* Default: especial*/
+    --cor6: #a2d2ffff;   
+
+    /* CSS HEX */
+    --outer-space: #48504bff;
+    --feldgrau: #4a564aff;
+    --ash-gray: #acbcaeff;
+    --pearl: #eae1ccff;
+    --khaki: #ceb4a0ff;
+
+    /* CSS HEX */
+    --thistle: #cdb4dbff;
+    --fairy-tale: #ffc8ddff;
+    --carnation-pink: #ffafccff;
+    --uranian-blue: #bde0feff;
+    --light-sky-blue: #a2d2ffff;
+}

@@ -1,22 +1,4 @@
-:root {
-    /* Default: White */
-    --cor1: rgb(255, 249, 246);
-
-    /* Default: Light Pink */
-    --cor2: #ffedeb;
-
-    /* Default: Pink */
-    --cor3: #ffe3d4;
-
-    /* Default: Dark Pink */
-    --cor4: #e5afaf;
-
-    /* Default: Brown */
-    --cor5: #9A3F3F;
-
-    /* Default: Yellorange*/
-    --cor6: #f8b865;    
-}
+@import './constants.css';
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -41,7 +23,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(img/bg.gif);
+    background-color: var(--cor3);
     margin: auto;
     padding: 60px;
     padding-top: 30px;
