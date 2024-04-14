@@ -23,7 +23,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: var(--cor3);
+    background-image: url(img/bg.gif);
     margin: auto;
     padding: 60px;
     padding-top: 30px;
@@ -42,11 +42,11 @@ main {
     box-shadow: 0px 14px 30px #00000075;
 }
 header {
-    background-color: var(--cor4);
+    background-color: var(--cor5);
     width: 1200px;
     height: 150px;
     margin: auto;
-    border-color: var(--cor4);
+    border-color: var(--cor5);
     border-radius: 15px 15px 0 0;
     border-style: solid;
     box-shadow: 0px 0px 15px #00000075;
@@ -85,13 +85,12 @@ p {
 }
 p#frasehead {
     text-align: left;
-    font-family: "Patrick Hand", cursive;
-    font-weight: bolder;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     font-size: 20px;
 }
 a {
     color: var(--cor5);
-    font-family: "Patrick Hand", cursive;
+    font-family: 'Dudu Calligraphy';
     text-decoration: none;
     font-size: 20px;
     
@@ -117,18 +116,18 @@ h2, h3 {
 }
 h1 {
     text-align: center;
-    font-family: "Patrick Hand", cursive;
+    font-family: 'Dudu Calligraphy';
     color: var(--cor5);
     font-size: 2.5em;
     color: var(--cor5);
 }
 h2 {
-    font-family: "Patrick Hand", cursive;
+    font-family: 'Dudu Calligraphy';
     margin-top: 0;
     color: var(--cor5);
 }
 h3 {
-    font-family: "Patrick Hand", cursive;
+    font-family: 'Dudu Calligraphy';
     font-size: 20px;
     text-align: center;
     margin: 0;
@@ -185,7 +184,7 @@ footer {
     border-color: var(--cor5);
 }
 footer p {
-    font-family: "Patrick Hand", cursive;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     margin: 3px;
 }
 .audio-container {
@@ -197,9 +196,3 @@ footer p {
 .flex {
     display:flex;
 }
-.patrick-hand-regular {
-    font-family: "Patrick Hand";
-    font-weight: 400;
-    font-style: normal;
-  }
-  
